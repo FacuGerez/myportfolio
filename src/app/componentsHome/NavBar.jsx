@@ -1,7 +1,6 @@
 "use client"
 import Link from "next/link";
 import {DarkMode} from "@/app/componentsHome/DarkMode";
-import {IconPerfil} from "@/app/componentsHome/IconPerfil";
 
 export function NavBar() {
     return (
