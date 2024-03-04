@@ -1,24 +1,26 @@
+"use client"
 import Link from "next/link";
+import {DarkMode} from "@/app/componentsHome/DarkMode";
+import {IconPerfil} from "@/app/componentsHome/IconPerfil";
 
 export function NavBar() {
     return (
         <header>
             <nav>
-                <Link href={"https://www.youtube.com/"}>
-                    Redireccion 1
+                <Link href={"/"}>
+                    Home
                 </Link>
-                <Link href={"https://www.youtube.com/"}>
-                    Redireccion 2
+                <Link href={"/aboutMe"}>
+                    About me
                 </Link>
-                <Link href={"https://www.youtube.com/"}>
-                    Redireccion 3
+                <Link href={"/skills"}>
+                    Skills
                 </Link>
-                <Link href={"https://www.youtube.com/"}>
-                    Redireccion 4
+                <Link href={"/contact"}>
+                    Contact
                 </Link>
-                <Link href={"https://www.youtube.com/"}>
-                    Redireccion 5
-                </Link>
+                <DarkMode/>
+
             </nav>
         </header>
     )
