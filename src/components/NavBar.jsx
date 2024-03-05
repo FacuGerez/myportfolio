@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import {DarkMode} from "@/app/componentsHome/DarkMode";
+import {DarkMode} from "@/components/DarkMode";
 
 export function NavBar() {
     return (

@@ -1,7 +1,7 @@
 export default function Contact() {
     return (
-        <main>
+        <div className={"pages"}>
             <h1>Contact with me</h1>
-        </main>
+        </div>
     );
 }

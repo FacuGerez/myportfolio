@@ -1,7 +1,7 @@
 export default function Skills() {
     return (
-        <main>
+        <div className={"pages"}>
             <h1>Skills</h1>
-        </main>
+        </div>
     );
 }
