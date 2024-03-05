@@ -9,13 +9,13 @@ export function NavBar() {
                 <Link href={"/"}>
                     Home
                 </Link>
-                <Link href={"/aboutMe"}>
+                <Link href={"/@about"}>
                     About me
                 </Link>
-                <Link href={"/skills"}>
+                <Link href={"/@skills"}>
                     Skills
                 </Link>
-                <Link href={"/contact"}>
+                <Link href={"/@contact"}>
                     Contact
                 </Link>
                 <DarkMode/>
