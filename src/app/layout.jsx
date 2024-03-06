@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import {NavBar} from "@/components/NavBar";
+import {ParticlesBackground} from "@/components/ParticlesBackground";
+import {FooterBackground} from "@/components/FooterBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,12 +21,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ParticlesBackground number={75}/>
         {children}
         <NavBar/>
         {about}
         {contact}
         {portfolio}
         {skills}
+        <FooterBackground><h1>Holaaa que ondaaaa</h1></FooterBackground>
       </body>
     </html>
   );
