@@ -1,11 +1,13 @@
 "use client"
+import "../styleComponents/navbar.css"
 import Link from "next/link";
 import {DarkMode} from "@/components/DarkMode";
 
 export function NavBar() {
+
     return (
-        <header>
-            <nav>
+        <header className={"headerFixed"} >
+            <nav className={"navbar"}>
                 <Link href={"/"}>
                     Home
                 </Link>
@@ -19,7 +21,6 @@ export function NavBar() {
                     Contact
                 </Link>
                 <DarkMode/>
-
             </nav>
         </header>
     )
