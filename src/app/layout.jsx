@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import {NavBar} from "@/app/componentsHome/NavBar";
+import {NavBar} from "@/components/NavBar";
+import {FooterBackground} from "@/components/FooterBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,12 +10,23 @@ export const metadata = {
   description: "This is my portfolio where I public my projects and ideas ",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+    children,
+    about,
+    contact,
+    portfolio,
+    skills,
+}) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar/>
         {children}
+        <NavBar/>
+        {about}
+        {contact}
+        {portfolio}
+        {skills}
+        <FooterBackground><h1>Holaaa que ondaaaa</h1></FooterBackground>
       </body>
     </html>
   );
