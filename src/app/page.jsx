@@ -5,7 +5,7 @@ export default function Home() {
   return (
       <div className={"pages"}>
           <ParticlesBackground number={64}/>
-          <h1>HOLA RAMOOOOOOOOOOOOOOON MIRA ESTA PAGINAAAAAAA <strong>Facundo Nahuel Gerez</strong>.<br/>I´m a Software Developer</h1>
+          <h1>Oh Hi!!, I´m <strong>Facundo Nahuel Gerez</strong>.<br/>I´m a Software Developer</h1>
           <ButtonTransparent/>
       </div>
   );
