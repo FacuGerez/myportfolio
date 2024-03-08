@@ -1,25 +1,28 @@
 "use client"
 import "../styleComponents/navbar.css"
-import Link from "next/link";
 import {DarkMode} from "@/components/DarkMode";
+import { useRouter } from 'next/navigation'
 
 export function NavBar() {
-
+    const router = useRouter()
     return (
         <header className={"headerFixed"} >
             <nav className={"navbar"}>
-                <Link href={"/"}>
+                <button type="button" onClick={() => router.push('#home')}>
                     Home
-                </Link>
-                <Link href={"/@about"}>
-                    About me
-                </Link>
-                <Link href={"/@skills"}>
+                </button>
+                <button type="button" onClick={() => router.push('#about')}>
+                    About
+                </button>
+                <button type="button" onClick={() => router.push('#skills')}>
                     Skills
-                </Link>
-                <Link href={"/@contact"}>
+                </button>
+                <button type="button" onClick={() => router.push('#portfolio')}>
+                    Portfolio
+                </button>
+                <button type="button" onClick={() => router.push('#contact')}>
                     Contact
-                </Link>
+                </button>
                 <DarkMode/>
             </nav>
         </header>

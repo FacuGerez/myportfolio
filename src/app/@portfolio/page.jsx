@@ -1,7 +1,7 @@
-export default function About() {
+export default function Portfolio() {
     return (
-        <div className={"pages"}>
-            <h1>About me</h1>
+        <div className={"pages"} id={"portfolio"}>
+            <h1>My portfolio</h1>
         </div>
     );
 }

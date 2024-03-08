@@ -23,9 +23,9 @@ export default function RootLayout({
         {children}
         <NavBar/>
         {about}
-        {contact}
-        {portfolio}
         {skills}
+        {portfolio}
+        {contact}
         <FooterBackground><h1>Holaaa que ondaaaa</h1></FooterBackground>
       </body>
     </html>
