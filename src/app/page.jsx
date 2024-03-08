@@ -1,12 +1,20 @@
-import {ButtonTransparent} from "@/components/ButtonTransparent";
-import {ParticlesBackground} from "@/components/ParticlesBackground";
-
+import Homepage from "@/app/pages/Homepage";
+import Skills from "@/app/pages/Skills";
+import About from "@/app/pages/About";
+import Portfolio from "@/app/pages/Portfolio";
+import Contact from "@/app/pages/Contact";
+import { BrowserRouter as Browser, Routes, Route } from "react-router-dom";
+import {NavBar} from "@/components/NavBar";
 export default function Home() {
   return (
-      <div className={"pages"} id={"home"}>
-          <ParticlesBackground number={64}/>
-          <h1>Oh Hi!!, I´m <strong>Facundo Nahuel Gerez</strong>.<br/>I´m a Software Developer</h1>
-          <ButtonTransparent/>
-      </div>
+      <>
+          <Homepage/>
+          <NavBar/>
+          <About/>
+          <Skills/>
+          <Portfolio/>
+          <Contact/>
+      </>
+
   );
 }

@@ -8,19 +8,19 @@ export function NavBar() {
     return (
         <header className={"headerFixed"} >
             <nav className={"navbar"}>
-                <button type="button" onClick={() => router.push('#home')}>
+                <button type="button" onClick={() => router.replace('#home')}>
                     Home
                 </button>
-                <button type="button" onClick={() => router.push('#about')}>
+                <button type="button" onClick={() => router.replace('#about')}>
                     About
                 </button>
-                <button type="button" onClick={() => router.push('#skills')}>
+                <button type="button" onClick={() => router.replace('#skills')}>
                     Skills
                 </button>
-                <button type="button" onClick={() => router.push('#portfolio')}>
+                <button type="button" onClick={() => router.replace('#portfolio')}>
                     Portfolio
                 </button>
-                <button type="button" onClick={() => router.push('#contact')}>
+                <button type="button" onClick={() => router.replace('#contact')}>
                     Contact
                 </button>
                 <DarkMode/>
