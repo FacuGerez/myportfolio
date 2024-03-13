@@ -2,15 +2,19 @@
 import "../styleComponents/navbar.css"
 import {DarkMode} from "@/components/DarkMode";
 import { useRouter } from 'next/navigation'
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+
+export const SINGLE_PAGES = ["Home","About","Skills","Portfolio","Contact"]
 
 export function NavBar() {
+    let [activo,setActivo] = useState("")
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > window.innerHeight) {
-                console.log("Home pasada");
-            } else {
-                console.log(window.scrollY);
+            for (let i = 0; i < SINGLE_PAGES.length; i++) {
+                if (window.scrollY < (window.innerHeight * (i+1)) && (window.innerHeight * (i)) <= window.scrollY) {
+                    setActivo(SINGLE_PAGES[i])
+                    break
+                }
             }
         };
         // Attach the event listener
@@ -24,21 +28,11 @@ export function NavBar() {
     return (
         <header className={"headerFixed"} >
             <nav className={"navbar"}>
-                <button type="button" onClick={() => router.replace('#home')}>
-                    Home
-                </button>
-                <button type="button" onClick={() => router.replace('#about')}>
-                    About
-                </button>
-                <button type="button" onClick={() => router.replace('#skills')}>
-                    Skills
-                </button>
-                <button type="button" onClick={() => router.replace('#portfolio')}>
-                    Portfolio
-                </button>
-                <button type="button" onClick={() => router.replace('#contact')}>
-                    Contact
-                </button>
+                {SINGLE_PAGES.map((item,index) => (
+                    <button key={index} type="button" className={activo === SINGLE_PAGES[index] ? "active" : ""} onClick={() => router.replace("#" + SINGLE_PAGES[index])}>
+                        {SINGLE_PAGES[index]}
+                    </button>
+                ))}
                 <DarkMode/>
             </nav>
         </header>
