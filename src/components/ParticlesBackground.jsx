@@ -6,8 +6,8 @@ export function ParticlesBackground({number}) {
     }
     return (
         <div className={"particlesBackground"}>
-            {animationSpeed.map((item) => (
-                <span style={item}></span>
+            {animationSpeed.map((item, index) => (
+                <span style={item} key={index}></span>
             ))}
         </div>
     )
