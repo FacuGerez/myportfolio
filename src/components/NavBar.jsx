@@ -7,7 +7,7 @@ import {useEffect, useState} from "react";
 export const SINGLE_PAGES = ["Home","About","Skills","Portfolio","Contact"]
 
 export function NavBar() {
-    let [activo,setActivo] = useState("")
+    let [activo,setActivo] = useState("Home")
     useEffect(() => {
         const handleScroll = () => {
             for (let i = 0; i < SINGLE_PAGES.length; i++) {
@@ -29,7 +29,7 @@ export function NavBar() {
       <nav className={"navbar"}>
           {SINGLE_PAGES.map((item, index) => (
             <a key={index} type="button" className={activo === SINGLE_PAGES[index] ? "active" : ""}
-                    onClick={() => router.replace("#" + SINGLE_PAGES[index])}>
+               href={"#" + SINGLE_PAGES[index]}>
                 {SINGLE_PAGES[index]}
             </a>
           ))}
