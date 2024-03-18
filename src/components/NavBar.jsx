@@ -26,15 +26,14 @@ export function NavBar() {
         }, []);
     const router = useRouter()
     return (
-        <header className={"headerFixed"} >
-            <nav className={"navbar"}>
-                {SINGLE_PAGES.map((item,index) => (
-                    <button key={index} type="button" className={activo === SINGLE_PAGES[index] ? "active" : ""} onClick={() => router.replace("#" + SINGLE_PAGES[index])}>
-                        {SINGLE_PAGES[index]}
-                    </button>
-                ))}
-                <DarkMode/>
-            </nav>
-        </header>
+      <nav className={"navbar"}>
+          {SINGLE_PAGES.map((item, index) => (
+            <a key={index} type="button" className={activo === SINGLE_PAGES[index] ? "active" : ""}
+                    onClick={() => router.replace("#" + SINGLE_PAGES[index])}>
+                {SINGLE_PAGES[index]}
+            </a>
+          ))}
+          <DarkMode/>
+      </nav>
     )
 }

@@ -1,6 +1,5 @@
 export function Footer() {
     return (
-        <footer>
-        </footer>
+      <h1>Holaaa que ondaaaa</h1>
     )
 }
