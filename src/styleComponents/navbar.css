@@ -1,15 +1,18 @@
 .navbar{
     width: 100%;
-    max-width: 100vw;
+    max-width: calc(100vw - 60px);
     z-index: 1000;
     height: 8vh;
+    padding: 0 3rem;
+    margin: 0 30px;
     background-color: rgba(149,157,165,.2);
+    border-radius: 20rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
     position: fixed;
     overflow: hidden;
-    top: 0;
+    top: 10px;
 }
 .navbar a{
     text-decoration: none;

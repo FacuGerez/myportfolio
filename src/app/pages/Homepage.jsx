@@ -9,8 +9,9 @@ export default function Homepage() {
     return (
       <div className={"pages " + "home"} id={"Home"}>
         {/*<ParticlesBackground number={64}/>*/}
-        <div className={"container-descriptions"}>
-          <div className={"container-descriptions-header"}>
+        <div className={"container"}>
+          <div className={"container-descriptions"}>
+            <div className={"container-descriptions-header"}>
             <span>
               <h1>F</h1>
               <h1>u</h1>
@@ -54,18 +55,20 @@ export default function Homepage() {
               <h1>e</h1>
               <h1>r</h1>
             </span>
-            <h1>Oh Hi!!
               <br/>
-              I´m
-              <strong> Facundo<br/></strong>
-              <strong>Nahuel<br/></strong>
-              <strong>Gerez</strong>
-            </h1>
+              <h2>Oh Hi!!, I´m</h2>
+              <h1>
+                <strong>Facundo </strong>
+                <strong>Nahuel<br/></strong>
+                <strong>Gerez</strong>
+              </h1>
+            </div>
+            <h2>I am a computer engineering student and junior developer in the field of full stack development, mobile
+              application development and API development.</h2>
+            <ButtonTransparent/>
           </div>
-          <h2>I am a computer engineering student and junior developer in the field of full stack development, mobile application development and API development.</h2>
-          <ButtonTransparent/>
+          <Image priority={true} className={"image"} src={image} alt={"My image where im smiling"}/>
         </div>
-        <Image priority={true} className={"avatar"} src={image} alt={"My image where im smiling"}/>
       </div>
     );
 }

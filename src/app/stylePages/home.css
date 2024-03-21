@@ -1,12 +1,20 @@
 .home{
+    background: rgb(53,0,90);
+    background: linear-gradient(45deg, rgba(53,0,90,1) 0%, rgba(0,0,0,1) 25%, rgba(21,0,36,1) 75%, rgba(53,0,90,1) 100%);
+}
+.home .container{
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
+    animation: disappear linear both;
+    animation-range: 0 50vh;
+    animation-timeline: scroll(root block)
 }
 .home .container-image{
     width: 30rem;
     height: 30rem;
 }
-.home .avatar{
+.home .image{
     object-fit: contain;
     aspect-ratio: 1/1;
     width: 30rem;
@@ -20,19 +28,32 @@
     max-width: 50%;
     max-height: calc(100% - 8vh);
     padding: 40px;
-    background-color: rgba(255,255,255,.8);
     border-radius: 40px;
+    text-wrap: balance;
+}
+.container-descriptions h1{
+    display: inline-block;
 }
 .container-descriptions span h1{
-    display: inline-block;
+    color: lightblue;
+    font-size: 45px;
+}
+.home .container-descriptions h2{
     color: white;
 }
 .container-descriptions span h1:hover{
-    color: orange;
+    color: rgba(85,0,255,1);;
     animation: rubberBand 1s;
-    transition: color 2s;
+    transition: color 1.25s;
 }
+
 .container-descriptions h1 strong{
-    color: white;
+    color: rgba(117,0,197,1);
     font-size: 60px;
+}
+
+@keyframes disappear {
+    100%{
+        opacity: 0;
+    }
 }
